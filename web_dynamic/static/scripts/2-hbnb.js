@@ -14,3 +14,16 @@ $(document).ready(function () {
 		console.log(myId);
 });
 });
+
+$.ajax({
+	url: http://0.0.0.0:5001/api/v1/status/',
+	type: 'GET',
+	dataType: 'json',
+	success: function (xhr, status) {
+		$('api_status').addClass('available');
+	},
+
+	error: function (xhr, status) {
+		console.log('error ' + status);
+	}
+});
